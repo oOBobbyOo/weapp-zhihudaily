@@ -1,0 +1,15 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+    <view class="news-item-container">
+        <navigator url="../details/details?id={{item.id}}" wx:for="{{list}}" wx:key="{{item.id}}">
+            <view class="news-item">
+                <view class="news-item-left">
+                    <text class="news-item-title">{{item.title}}</text>
+                </view>
+                <view class="news-item-right">
+                    <image src="{{item.images[0]}}" class="news-image" />
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>
